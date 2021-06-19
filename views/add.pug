@@ -1,0 +1,41 @@
+extends layout 
+
+block content
+    h1 Add Record
+    br
+    form(action="/add" method="POST")
+        div.form-group
+            label(for="name") Name
+            input(type="text", class="form-control", id="name", name="name", placeholder="Enter Name")
+        br
+        div.form-group
+            label(for="gender") Gender
+            input(type="text", class="form-control", id="gender", name="gender", placeholder="Enter Gender")
+        br
+        div.form-group
+            label(for="course_code") Course Code
+            input(type="text", class="form-control", id="course_code", name="course_code", placeholder="Enter Course Code")
+        br
+        div.form-group
+            label(for="age") Age
+            input(type="number", class="form-control", id="age", name="age", placeholder="Enter Age" min="0")
+        br
+        div.form-group
+            label(for="email") Email
+            input(type="email", class="form-control", id="email", name="email", placeholder="Enter Email" )
+        br
+        div.form-group.phone
+            label(for="phone") Phone
+            input(type="text", class="form-control", id="phone", name="phone[]", placeholder="Enter Phone" )
+        br
+        button.btn.btn-info#add_phone(type='button') Add Phone
+        br
+        label Address
+        .form-group
+            input(type="text", class="form-control", id="country", name="country", placeholder="Enter Country")
+        .form-group
+            input(type="text", class="form-control", id="city", name="city", placeholder="Enter Country")
+        .form-group
+            input(type="text", class="form-control", id="street", name="street", placeholder="Enter Street #")
+        br
+        button(type="submit" class="btn btn-primary") Submit
